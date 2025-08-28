@@ -26,77 +26,80 @@ class DashboardTablet extends StatelessWidget {
         title: const Header(),
       ),
       body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            SubHeader(),
-            Row(
-              children: [
-                OverAllStatusWidget(
-                  containerColor: Colors.teal,
-                  title: 'Capacity',
-                  value: '110GB',
-                  icon: Icons.auto_awesome_motion_outlined,
-                ),
-                Gap(10),
-                OverAllStatusWidget(
-                  containerColor: Colors.green,
-                  title: 'Revenue',
-                  value: '\$2,169',
-                  icon: Icons.account_balance_outlined,
-                ),
-              ],
-            ),
-            Gap(10),
-            Row(
-              children: [
-                OverAllStatusWidget(
-                  containerColor: Colors.red,
-                  title: 'Blog',
-                  value: '139',
-                  icon: Icons.currency_bitcoin_sharp,
-                ),
-                Gap(10),
-                OverAllStatusWidget(
-                  containerColor: Colors.orange,
-                  title: 'Followers',
-                  value: '129K',
-                  icon: Icons.person_2_outlined,
-                )
-              ],
-            ),
-            Gap(10),
-            Row(
-              children: [
-                ProfitStatusWidgetWidgetHolder(
-                  flex: 2,
-                ),
-                Gap(10),
-                SalesThisWeekWidget(
-                  flex: 1,
-                ),
-                Gap(10),
-                MarketWidget(
-                  flex: 1,
-                ),
-              ],
-            ),
-            Gap(10),
-            Row(
-              children: [
-                OverViewWidget(
-                  flex: 2,
-                ),
-                Gap(10),
-                MembersWidget(
-                  flex: 1,
-                ),
-                Gap(10),
-                UsersWidget(
-                  flex: 1,
-                )
-              ],
-            )
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(15),
+          child: Column(
+            children: [
+              SubHeader(),
+              Row(
+                children: [
+                  OverAllStatusWidget(
+                    containerColor: Colors.teal,
+                    title: 'Capacity',
+                    value: '110GB',
+                    icon: Icons.auto_awesome_motion_outlined,
+                  ),
+                  Gap(10),
+                  OverAllStatusWidget(
+                    containerColor: Colors.green,
+                    title: 'Revenue',
+                    value: '\$2,169',
+                    icon: Icons.account_balance_outlined,
+                  ),
+                ],
+              ),
+              Gap(10),
+              Row(
+                children: [
+                  OverAllStatusWidget(
+                    containerColor: Colors.red,
+                    title: 'Blog',
+                    value: '139',
+                    icon: Icons.currency_bitcoin_sharp,
+                  ),
+                  Gap(10),
+                  OverAllStatusWidget(
+                    containerColor: Colors.orange,
+                    title: 'Followers',
+                    value: '129K',
+                    icon: Icons.person_2_outlined,
+                  )
+                ],
+              ),
+              Gap(10),
+              Row(
+                children: [
+                  ProfitStatusWidgetWidgetHolder(
+                    flex: 2,
+                  ),
+                  Gap(10),
+                  SalesThisWeekWidget(
+                    flex: 1,
+                  ),
+                  Gap(10),
+                  MarketWidget(
+                    flex: 1,
+                  ),
+                ],
+              ),
+              Gap(10),
+              Row(
+                children: [
+                  OverViewWidget(
+                    flex: 2,
+                  ),
+                  Gap(10),
+                  MembersWidget(
+                    flex: 1,
+                  ),
+                  Gap(10),
+                  UsersWidget(
+                    flex: 1,
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
